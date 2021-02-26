@@ -10,7 +10,7 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
 
-public class PracticeFormWithFakerTests {
+public class PracticeFormWithFakerTests extends TestBase{
 
     @Test
     @DisplayName("Fill Form With Faker")

@@ -4,7 +4,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import pages.PracticeFormPage;
 
-public class PracticeFormWithPageObjectsTests {
+public class PracticeFormWithPageObjectsTests extends TestBase{
 
     PracticeFormPage practiceFormPage = new PracticeFormPage();
 
