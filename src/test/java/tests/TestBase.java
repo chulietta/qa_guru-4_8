@@ -16,7 +16,7 @@ public class TestBase {
     static void setup() {
         addListener("AllureSelenide", new AllureSelenide().screenshots(true).savePageSource(true));
         Configuration.browser = System.getProperty("browser", "chrome");
-        Configuration.startMaximized = true;
+        Configuration.browserSize = "1920x1080";
 
         if(System.getProperty("remote_driver") != null) {
             // config for Java + Selenide
