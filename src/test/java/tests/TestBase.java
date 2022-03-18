@@ -18,7 +18,7 @@ public class TestBase {
         Configuration.browser = System.getProperty("browser", "chrome");
         Configuration.browserSize = "1920x1080";
 
-        if(System.getProperty("remote_driver") != null) {
+        if (System.getProperty("remote_driver") != null) {
             // config for Java + Selenide
             DesiredCapabilities capabilities = new DesiredCapabilities();
             capabilities.setCapability("enableVNC", true);
@@ -26,18 +26,18 @@ public class TestBase {
             Configuration.browserCapabilities = capabilities;
             Configuration.remote = System.getProperty("remote_driver");
 
-            // config for Java + Selenium
-//        DesiredCapabilities capabilities = new DesiredCapabilities();
-//        capabilities.setCapability("browserName", "chrome");
-//        capabilities.setCapability("browserVersion", "87.0");
-//        capabilities.setCapability("selenoid:options", Map.<String, Object>of(
-//                "enableVNC", true,
-//                "enableVideo", true
-//        ));
-//        RemoteWebDriver driver = new RemoteWebDriver(
-//                URI.create("http://selenoid:4444/wd/hub").toURL(),
-//                capabilities
-//        );
+ /*           // config for Java + Selenium
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+        capabilities.setCapability("browserName", "chrome");
+        capabilities.setCapability("browserVersion", "87.0");
+        capabilities.setCapability("selenoid:options", Map.<String, Object>of(
+                "enableVNC", true,
+                "enableVideo", true
+        ));
+        RemoteWebDriver driver = new RemoteWebDriver(
+               URI.create("http://selenoid:4444/wd/hub").toURL(),
+                capabilities
+        );*/
         }
     }
 
@@ -46,7 +46,7 @@ public class TestBase {
         attachScreenshot("Last screenshot");
         attachPageSource();
         attachAsText("Browser console logs", getConsoleLogs());
-        if(System.getProperty("video_storage") != null)
+        if (System.getProperty("video_storage") != null)
             attachVideo();
         closeWebDriver();
     }

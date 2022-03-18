@@ -16,4 +16,4 @@ public class PracticeFormWithPageObjectsTests extends TestBase{
         practiceFormPage.fillPracticeForm();
         practiceFormPage.verifySubmitting();
     }
-};
+}
